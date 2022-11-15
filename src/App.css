@@ -32,6 +32,9 @@
   background: var(--violet);
   
 }
+.card-match {
+  margin: 40px 0;
+}
 .card-date {
   color: rgb(83, 82, 82);
   position: absolute;

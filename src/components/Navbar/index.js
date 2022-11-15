@@ -19,7 +19,7 @@ function navbar() {
               className="d-inline-block align-top "
               alt="React Bootstrap logo"
             />
-             Coupe Du Monde 2022</Navbar.Brand>
+             World Cup Champion 2022</Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse  id="responsive-navbar-nav">
             <Nav className="  me-auto">
