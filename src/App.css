@@ -20,10 +20,9 @@
   
   background: var(--orange)  ; 
 }
-/* ..........home .......... */
+/* ......................................home .................................. */
 .home {
   
-  float: left;
   background: var(--violet);
 }
 .home h2 {
@@ -44,4 +43,24 @@
 .flag {
   width: 40px;
   height: 30px;
+}
+/*............................profil............................ */
+
+.profil {
+  background: var(--violet);
+}
+
+.img-profil {
+  padding: 20px;
+  filter: grayscale(100%);
+  border-radius: 50px;
+}
+
+/* **************statistiques*********** */
+
+.score {
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--orange);
+
 }

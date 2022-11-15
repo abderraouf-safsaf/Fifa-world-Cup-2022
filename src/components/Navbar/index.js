@@ -27,12 +27,14 @@ function navbar() {
               <Link className="nav-link" to="/landing">Statistiques</Link>
               
               <NavDropdown title="Joueurs" id="collasible-nav-dropdown">
-                <NavDropdown.Item to="#action/3.1">Djamel Dahmani</NavDropdown.Item>
-                <NavDropdown.Item to="#action/3.2">
-                  Bilal Bouchakouri
+                <NavDropdown.Item >
+                <Link className="nav-link text-black" to="/djamel">Djamel Dahmani</Link>
                 </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">
-                  Nouar Salah Eddine
+                <NavDropdown.Item >
+                <Link className="nav-link text-black" to="/bilal">Bouchakouri Bilal</Link>
+                </NavDropdown.Item>
+                <NavDropdown.Item >
+                <Link className="nav-link text-black" to="/salah">Nouar Salah Eddine</Link>
                 </NavDropdown.Item>
                 <NavDropdown.Divider />
                
