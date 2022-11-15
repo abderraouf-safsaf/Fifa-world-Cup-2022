@@ -16,9 +16,16 @@
 
 
 .navbar {
-  padding: 0;
-  background: var(--orange);
+  
+  background: var(--orange)  ; 
 }
-.container {
+.home {
+  float: left;
+  background: var(--violet);
+}
+.home h2 {
  
+  color: var(--white);
+  background: var(--violet);
+  
 }
