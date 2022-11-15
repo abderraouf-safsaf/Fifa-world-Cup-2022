@@ -2,6 +2,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family:Georgia, 'Times New Roman', Times, serif ;
   
   
 }
@@ -19,7 +20,9 @@
   
   background: var(--orange)  ; 
 }
+/* ..........home .......... */
 .home {
+  
   float: left;
   background: var(--violet);
 }
@@ -28,4 +31,14 @@
   color: var(--white);
   background: var(--violet);
   
+}
+.card-date {
+  color: rgb(83, 82, 82);
+  position: absolute;
+  top: 8px;
+  right:10px;
+}
+.flag {
+  width: 40px;
+  height: 30px;
 }
