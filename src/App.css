@@ -1,11 +1,24 @@
-/* css colors  */
-:root {
-  --violet  : #550065;
-}
-/* Géneral */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  background: var(--violet);
+  
+  
+}
+
+/* css colors  */
+:root {
+  --violet  : #550065;
+  --orange : #F54500;
+  --white :#f1f1f1
+}
+/* Géneral */
+
+
+.navbar {
+  padding: 0;
+  background: var(--orange);
+}
+.container {
+ 
 }

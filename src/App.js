@@ -2,13 +2,18 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Landing from './components/landing';
 import Navbar from './components/Navbar';
+import {
+  BrowserRouter,
+  Routes,
+  Route
+} from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
+    <BrowserRouter >
       <Navbar />
-      <Landing />
-    </div>
+      <Route path="/landing" component={Landing}/>
+    </BrowserRouter>
   );
 }
 
