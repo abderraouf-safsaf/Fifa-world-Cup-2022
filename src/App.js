@@ -10,9 +10,10 @@ function App() {
 
     <BrowserRouter>
       <Navbar />
+      <Home />
       <Routes>
         
-      <Route path="/" element={<Home />} />
+      
       <Route path="/landing" element={<Landing />} />
 
       </Routes>
