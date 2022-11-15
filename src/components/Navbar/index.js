@@ -23,21 +23,19 @@ function navbar() {
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse  id="responsive-navbar-nav">
             <Nav className="  me-auto">
-              <Link className=" nav-link" to="/">home</Link>
-              <Link className="nav-link" to="/landing">Landing page</Link>
+              <Link className=" nav-link" to="/">Matches du Jour</Link>
+              <Link className="nav-link" to="/landing">Statistiques</Link>
               
-              <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
-                <NavDropdown.Item to="#action/3.1">Action</NavDropdown.Item>
+              <NavDropdown title="Joueurs" id="collasible-nav-dropdown">
+                <NavDropdown.Item to="#action/3.1">Djamel Dahmani</NavDropdown.Item>
                 <NavDropdown.Item to="#action/3.2">
-                  Another action
+                  Bilal Bouchakouri
                 </NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.3">
-                  Something
+                  Nouar Salah Eddine
                 </NavDropdown.Item>
                 <NavDropdown.Divider />
-                <NavDropdown.Item href="#action/3.4">
-                  Separated link
-                </NavDropdown.Item>
+               
               </NavDropdown>
             </Nav>
            
