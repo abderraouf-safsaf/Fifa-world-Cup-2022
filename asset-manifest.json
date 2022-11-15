@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/Fifa-world-Cup-/static/css/main.d8c6d549.css",
-    "main.js": "/Fifa-world-Cup-/static/js/main.8aab138d.js",
-    "static/js/787.daad49d3.chunk.js": "/Fifa-world-Cup-/static/js/787.daad49d3.chunk.js",
-    "static/media/logo.svg": "/Fifa-world-Cup-/static/media/logo.dc32dc6c3e2df586ffab9866e3108cca.svg",
-    "static/media/logo.png": "/Fifa-world-Cup-/static/media/logo.dfb613d5048f27813f85.png",
-    "static/media/equador.jpg": "/Fifa-world-Cup-/static/media/equador.42b686edfe7eb874ad70.jpg",
-    "static/media/qatar.jpg": "/Fifa-world-Cup-/static/media/qatar.0808f50397609456fb71.jpg",
-    "index.html": "/Fifa-world-Cup-/index.html",
-    "main.d8c6d549.css.map": "/Fifa-world-Cup-/static/css/main.d8c6d549.css.map",
-    "main.8aab138d.js.map": "/Fifa-world-Cup-/static/js/main.8aab138d.js.map",
-    "787.daad49d3.chunk.js.map": "/Fifa-world-Cup-/static/js/787.daad49d3.chunk.js.map"
+    "main.css": "/Fifa-world-Cup/static/css/main.d8c6d549.css",
+    "main.js": "/Fifa-world-Cup/static/js/main.f583e2c1.js",
+    "static/js/787.daad49d3.chunk.js": "/Fifa-world-Cup/static/js/787.daad49d3.chunk.js",
+    "static/media/logo.svg": "/Fifa-world-Cup/static/media/logo.dc32dc6c3e2df586ffab9866e3108cca.svg",
+    "static/media/logo.png": "/Fifa-world-Cup/static/media/logo.dfb613d5048f27813f85.png",
+    "static/media/equador.jpg": "/Fifa-world-Cup/static/media/equador.42b686edfe7eb874ad70.jpg",
+    "static/media/qatar.jpg": "/Fifa-world-Cup/static/media/qatar.0808f50397609456fb71.jpg",
+    "index.html": "/Fifa-world-Cup/index.html",
+    "main.d8c6d549.css.map": "/Fifa-world-Cup/static/css/main.d8c6d549.css.map",
+    "main.f583e2c1.js.map": "/Fifa-world-Cup/static/js/main.f583e2c1.js.map",
+    "787.daad49d3.chunk.js.map": "/Fifa-world-Cup/static/js/787.daad49d3.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.d8c6d549.css",
-    "static/js/main.8aab138d.js"
+    "static/js/main.f583e2c1.js"
   ]
 }
