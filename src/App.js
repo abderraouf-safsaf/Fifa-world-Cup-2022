@@ -18,7 +18,7 @@ function App() {
       
       <Routes>
         
-      <Route path="/Fifa-world-Cup-2022" element={<Home />} />
+      <Route path="/Fifa-world-Cup-2022/" element={<Home />} />
       <Route path="/" element={<Home />} />
       <Route path="/landing" element={<Landing />} />
       <Route path="/djamel" element={<Djamel />} />
