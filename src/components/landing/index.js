@@ -9,7 +9,9 @@ function Landing() {
   return (
     <div className="profil">
       <img className="cup-svg" src={cup} alt="" />
+      
       <div className="page-content page-container" id="page-content">
+      <h4>Programme TV des matchs de football : ne ratez aucun match de foot retransmis en direct à la télévision ! Consultez le programme ici.</h4>
         <div className="padding">
           <div className="row container d-flex justify-content-center">
             <div className="col-lg-8 m-4 stretch-card">
