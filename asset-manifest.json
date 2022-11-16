@@ -1,11 +1,11 @@
 {
   "files": {
     "main.css": "/Fifa-world-Cup-2022/static/css/main.0fc27e6a.css",
-    "main.js": "/Fifa-world-Cup-2022/static/js/main.dffd7ae7.js",
+    "main.js": "/Fifa-world-Cup-2022/static/js/main.2732e7a4.js",
     "static/js/787.daad49d3.chunk.js": "/Fifa-world-Cup-2022/static/js/787.daad49d3.chunk.js",
-    "static/media/bilal.jpg": "/Fifa-world-Cup-2022/static/media/bilal.0f18a05b1ba45b7ad326.jpg",
-    "static/media/djamel.jpg": "/Fifa-world-Cup-2022/static/media/djamel.d294fafd0c9243d7b8eb.jpg",
-    "static/media/salah.jpg": "/Fifa-world-Cup-2022/static/media/salah.49249d237e9c52a10e4c.jpg",
+    "static/media/avatar3.jpg": "/Fifa-world-Cup-2022/static/media/avatar3.0f18a05b1ba45b7ad326.jpg",
+    "static/media/avatar2.jpg": "/Fifa-world-Cup-2022/static/media/avatar2.d294fafd0c9243d7b8eb.jpg",
+    "static/media/avatar1.jpg": "/Fifa-world-Cup-2022/static/media/avatar1.49249d237e9c52a10e4c.jpg",
     "static/media/logo.svg": "/Fifa-world-Cup-2022/static/media/logo.dc32dc6c3e2df586ffab9866e3108cca.svg",
     "static/media/logo.png": "/Fifa-world-Cup-2022/static/media/logo.dfb613d5048f27813f85.png",
     "static/media/equador.jpg": "/Fifa-world-Cup-2022/static/media/equador.42b686edfe7eb874ad70.jpg",
@@ -13,11 +13,11 @@
     "static/media/cup.svg": "/Fifa-world-Cup-2022/static/media/cup.170b53d964cb2c8555874f9b70755ae0.svg",
     "index.html": "/Fifa-world-Cup-2022/index.html",
     "main.0fc27e6a.css.map": "/Fifa-world-Cup-2022/static/css/main.0fc27e6a.css.map",
-    "main.dffd7ae7.js.map": "/Fifa-world-Cup-2022/static/js/main.dffd7ae7.js.map",
+    "main.2732e7a4.js.map": "/Fifa-world-Cup-2022/static/js/main.2732e7a4.js.map",
     "787.daad49d3.chunk.js.map": "/Fifa-world-Cup-2022/static/js/787.daad49d3.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.0fc27e6a.css",
-    "static/js/main.dffd7ae7.js"
+    "static/js/main.2732e7a4.js"
   ]
 }
