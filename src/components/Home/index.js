@@ -14,7 +14,7 @@ function Home() {
     <div className="home container">
       <img src={logo} alt="logo" />
       <h2 className="m-4">Coupe du Monde de la FIFA, Qatar 2022™</h2>
-      <div className="row m-4">
+      <div className="row mb-0 m-4">
         <Card className="card-match">
           <Card.Header>
             Groupe A <br />

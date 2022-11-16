@@ -4,6 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Landing from "./components/landing";
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
+import Footer from "./components/footer";
 import Salah from "./components/players/salah";
 import Bilal from "./components/players/bilal";
 import Djamel from "./components/players/djamel";
@@ -24,7 +25,7 @@ function App() {
       <Route path="/salah" element={<Salah />} />
 
       </Routes>
-
+    <Footer />
     </BrowserRouter>
   );
 }

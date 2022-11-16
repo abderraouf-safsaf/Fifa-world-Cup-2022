@@ -78,3 +78,25 @@
   color: var(--orange);
 
 }
+
+/* **************Classements*********** */
+
+.flag-classment {
+  width: 20px;
+  border-radius: 2px;
+}
+.cup-svg{
+  
+  width: 30%;
+  filter: invert(50%) sepia(93%) saturate(6319%) hue-rotate(10deg) brightness(103%) contrast(103%);
+  
+}
+/* ***********Footer ***************** */
+
+footer {
+  padding: 30px;
+  background:rgb(28, 1, 28);
+  color: aliceblue;
+  font-size: smaller;
+ 
+}

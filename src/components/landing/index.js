@@ -1,11 +1,82 @@
-import React from 'react'
+import React from "react";
+import france from "./img/flag/france.png";
+import argentine from "./img/flag/argentine.png";
+import portugal from "./img/flag/portugal.png";
+import cup from "./img/cup.svg";
+
 
 function Landing() {
   return (
-    <div>
-      <h1>En Construction</h1>
+    <div className="profil">
+      <img className="cup-svg" src={cup} alt="" />
+      <div className="page-content page-container" id="page-content">
+        <div className="padding">
+          <div className="row container d-flex justify-content-center">
+            <div className="col-lg-8 m-4 stretch-card">
+              <div className="card">
+                <div className="card-body">
+                  <h4 className="card-title mb-4  ">Statistiques</h4>
+
+                  <div className="table-responsive">
+                    <table className="table">
+                      <thead>
+                        <tr>
+                          <th>POS.</th>
+                          <th colSpan={2}>Nom</th>
+
+                          <th>Pts</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>1</td>
+                          <td colSpan={2}>
+                            <img
+                              className="flag-classment"
+                              src={france}
+                              alt="flag"
+                            />
+                            {"-"} Dahmani Djamel
+                          </td>
+
+                          <td className="text-center fw-bolder">60</td>
+                        </tr>
+                        <tr>
+                          <td>2</td>
+                          <td colSpan={2}>
+                            <img
+                              className="flag-classment"
+                              src={argentine}
+                              alt="flag"
+                            />
+                            {"-"} Nouar Salah Eddine
+                          </td>
+
+                          <td className="text-center fw-bolder">45</td>
+                        </tr>
+                        <tr>
+                          <td>3</td>
+                          <td colSpan={2}>
+                            <img
+                              className="flag-classment"
+                              src={portugal}
+                              alt="flag"
+                            />
+                            {"-"} Bouchakouri Bilal
+                          </td>
+                          <td className="text-center fw-bolder">0</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-  )
+  );
 }
 
-export default Landing
+export default Landing;

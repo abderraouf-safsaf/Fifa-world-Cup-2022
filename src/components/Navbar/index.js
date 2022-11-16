@@ -24,7 +24,7 @@ function navbar() {
           <Navbar.Collapse  id="responsive-navbar-nav">
             <Nav className="  me-auto">
               <Link className=" nav-link" to="/">Matches du Jour</Link>
-              <Link className="nav-link" to="/landing">Statistiques</Link>
+              <Link className="nav-link" to="/landing">Classements</Link>
               
               <NavDropdown title="Joueurs" id="collasible-nav-dropdown">
                 <NavDropdown.Item >
