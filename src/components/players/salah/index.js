@@ -14,7 +14,7 @@ function Salah() {
             <img className="flag-profil" src={flag} alt="flag" />
             <h1 className="text-profil">Nouar Salah Eddine</h1>
             <hr />
-            <h1 className="text-center text-primary fw-bold">25 Points</h1>
+            <h1 className="text-center text-primary fw-bold">0 Points</h1>
             
           </div>
         </div>
