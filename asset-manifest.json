@@ -1,19 +1,20 @@
 {
   "files": {
-    "main.css": "/Fifa-world-Cup-2022/static/css/main.d8c6d549.css",
-    "main.js": "/Fifa-world-Cup-2022/static/js/main.9ae9dcd7.js",
+    "main.css": "/Fifa-world-Cup-2022/static/css/main.76e65f31.css",
+    "main.js": "/Fifa-world-Cup-2022/static/js/main.a41b2dbc.js",
     "static/js/787.daad49d3.chunk.js": "/Fifa-world-Cup-2022/static/js/787.daad49d3.chunk.js",
+    "static/media/salah.jpg": "/Fifa-world-Cup-2022/static/media/salah.49249d237e9c52a10e4c.jpg",
     "static/media/logo.svg": "/Fifa-world-Cup-2022/static/media/logo.dc32dc6c3e2df586ffab9866e3108cca.svg",
     "static/media/logo.png": "/Fifa-world-Cup-2022/static/media/logo.dfb613d5048f27813f85.png",
     "static/media/equador.jpg": "/Fifa-world-Cup-2022/static/media/equador.42b686edfe7eb874ad70.jpg",
     "static/media/qatar.jpg": "/Fifa-world-Cup-2022/static/media/qatar.0808f50397609456fb71.jpg",
     "index.html": "/Fifa-world-Cup-2022/index.html",
-    "main.d8c6d549.css.map": "/Fifa-world-Cup-2022/static/css/main.d8c6d549.css.map",
-    "main.9ae9dcd7.js.map": "/Fifa-world-Cup-2022/static/js/main.9ae9dcd7.js.map",
+    "main.76e65f31.css.map": "/Fifa-world-Cup-2022/static/css/main.76e65f31.css.map",
+    "main.a41b2dbc.js.map": "/Fifa-world-Cup-2022/static/js/main.a41b2dbc.js.map",
     "787.daad49d3.chunk.js.map": "/Fifa-world-Cup-2022/static/js/787.daad49d3.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d8c6d549.css",
-    "static/js/main.9ae9dcd7.js"
+    "static/css/main.76e65f31.css",
+    "static/js/main.a41b2dbc.js"
   ]
 }
