@@ -1,30 +1,29 @@
 import React from "react";
-import djamel from "./img/djamel.jpg";
 import Badge from "react-bootstrap/Badge";
-import flag from "./img/flag.png"
-function Djamel() {
+
+function Player({  nom, avatar ,flag }) {
+  
   return (
     <div className="profil container pt-4 ">
       <div className="card container ">
         <div className="row">
           <div className="col-6">
-          <img className="img-profil " src={djamel} alt="djamel" />
+            <img
+              className="img-profil"
+              src={require(`${avatar}`)}
+              alt="salah"
+            />
           </div>
           <div className="col-6">
-            <img className="flag-profil" src={flag} alt="flag" />
-            <h1 className="text-profil">Dahmani Djamel</h1>
+            <img className="flag-profil" src={require(`${flag}`)} alt="flag" />
+            <h1 className="text-profil">{nom}</h1>
             <hr />
             <h1 className="text-center text-primary fw-bold">0 Points</h1>
-            
           </div>
         </div>
       </div>
 
-      
-
       {/* ****** statistique ****** */}
-
-
 
       <div className="page-content page-container" id="page-content">
         <div className="padding">
@@ -103,4 +102,4 @@ function Djamel() {
   );
 }
 
-export default Djamel;
+export default Player;

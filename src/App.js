@@ -5,28 +5,35 @@ import Landing from "./components/landing";
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
 import Footer from "./components/footer";
-import Salah from "./components/players/salah";
-import Bilal from "./components/players/bilal";
-import Djamel from "./components/players/djamel";
+import Player from "./components/players/player";
 
 function App() {
+  const data = require("./Database/Players.json");
+
+  const players = data.joueurs;
+
   return (
-
     <BrowserRouter>
-      <Navbar />
-      
-      
-      <Routes>
-        
-      <Route path="/Fifa-world-Cup-2022/" element={<Home />} />
-      <Route path="/" element={<Home />} />
-      <Route path="/landing" element={<Landing />} />
-      <Route path="/djamel" element={<Djamel />} />
-      <Route path="/bilal" element={<Bilal />} />
-      <Route path="/salah" element={<Salah />} />
+      <Navbar players={data.joueurs} />
 
+      <Routes>
+        <Route path="/Fifa-world-Cup-2022/" element={<Home />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/landing" element={<Landing />} />
+
+        {players.map((todo, id) => {
+          id = todo.id;
+          return (
+            <Route
+              path={`/${todo.nom}`}
+              element={
+                <Player key={todo.id} nom={todo.nom} avatar={todo.avatar} flag={todo.flag} />
+              }
+            />
+          );
+        })}
       </Routes>
-    <Footer />
+      <Footer />
     </BrowserRouter>
   );
 }

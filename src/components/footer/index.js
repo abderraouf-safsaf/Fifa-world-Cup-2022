@@ -7,7 +7,7 @@ function Footer() {
         <p>Projet réalisé par Nouar Salah Eddine - 2022 </p>
         <p>Les icones Qatar World Cup , sont prises sur iconFinder.com</p>
         
-        <small class="text-muted ">Copyright © 1992 - 2022 WINGO. Tous droits réservés.</small>
+        <small className="text-muted ">Copyright © 1992 - 2022 WINGO. Tous droits réservés.</small>
       </div>
    </footer>
   )

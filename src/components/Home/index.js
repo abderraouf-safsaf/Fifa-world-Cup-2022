@@ -12,13 +12,20 @@ import paysdegalles from "./img/flag/pays de galles.png";
 function Home() {
   return (
     <div className="home container">
-       
       <img src={logo} alt="logo" />
-      
-     
-      <h2 className="m-4 text-center">Coupe du Monde de la FIFA, Qatar 2022™</h2>
-      <h5>World Cup Champion est une application de paris sportif (Sur la coupe du monde seulment) : ne ratez aucun match de foot  ! Consultez le programme ici.</h5>
-      <h6>Match aujourd'hui. Retrouvez la liste de tous les matchs qui se jouent aujourd'hui sur cette page. Les rencontres sont classées par Groupe</h6>
+
+      <h2 className="m-4 text-center">
+        Coupe du Monde de la FIFA, Qatar 2022™
+      </h2>
+      <h5>
+        World Cup Champion est une application de paris sportif (Sur la coupe du
+        monde seulment) : ne ratez aucun match de foot ! Consultez le programme
+        ici.
+      </h5>
+      <h6>
+        Match aujourd'hui. Retrouvez la liste de tous les matchs qui se jouent
+        aujourd'hui sur cette page. Les rencontres sont classées par Groupe
+      </h6>
       <div className="row mb-0 m-4">
         <Card className="card-match">
           <Card.Header>
@@ -92,11 +99,7 @@ function Home() {
           <Card.Body className="row">
             <Card.Title className="col-5 text-center">
               {" "}
-              <img
-                className="flag text-center"
-                src={senegal}
-                alt="flag"
-              />{" "}
+              <img className="flag text-center" src={senegal} alt="flag" />{" "}
               <br /> Sénégal
             </Card.Title>
             <Card.Title className="col-2 text-center">

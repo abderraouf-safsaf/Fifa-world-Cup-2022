@@ -1,0 +1,25 @@
+{
+  "joueurs": [
+      {
+          "id" :"0",
+          "nom" : "Nouar Salah Eddine",
+          "avatar": "./imgPlayers/avatar1.jpg",
+          "flag": "./imgPlayers/flag1.png"
+          
+      },
+      {
+        "id" :"1",
+        "nom" : "Dahmani Djamel",
+        "avatar": "./imgPlayers/avatar2.jpg",
+        "flag": "./imgPlayers/flag2.png"
+        
+      },
+      {
+        "id" :"2",
+        "nom" : "Bouchakouri Bilal",
+        "avatar": "./imgPlayers/avatar3.jpg",
+        "flag": "./imgPlayers/flag3.png"
+      }
+      
+  ]
+}
