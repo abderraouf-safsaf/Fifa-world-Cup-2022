@@ -32,18 +32,22 @@ function navbar({ players }) {
               </Link>
 
               <NavDropdown title="Joueurs" id="collasible-nav-dropdown">
-                {players.map((player, key) => {
+                {players.map((player, index) => {
+                  
                   return (
-                    <NavDropdown.Item>
-                      <Link className="nav-link text-black" to={player.nom}>
-                        {" "}
-                        {player.nom}
-                      </Link>
+                    
+                  
+                    <NavDropdown.Item
+                      key = {index}
+                      as={Link}
+                      to={player.nom}
+                      className="nav-link text-black"
+                    >
+                      <span className="fw-bold">{index} </span>
+                    - {player.nom}
                     </NavDropdown.Item>
                   );
                 })}
-
-                <NavDropdown.Divider />
               </NavDropdown>
             </Nav>
           </Navbar.Collapse>

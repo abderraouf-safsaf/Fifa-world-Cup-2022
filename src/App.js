@@ -21,13 +21,15 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/landing" element={<Landing />} />
 
-        {players.map((todo, id) => {
-          id = todo.id;
+        {players.map((player, index) => {
+        
           return (
+             
             <Route
-              path={`/${todo.nom}`}
+              key={index}
+              path={`/${player.nom}`}
               element={
-                <Player key={todo.id} nom={todo.nom} avatar={todo.avatar} flag={todo.flag} />
+                <Player  nom={player.nom} avatar={player.avatar} flag={player.flag} />
               }
             />
           );
