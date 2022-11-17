@@ -38,7 +38,7 @@ function Home() {
               </span>
             </Card.Header>
             <Card.Body className="row">
-              <Card.Title className="col-5 text-center">
+              <Card.Title className="col-4 text-center">
                 {" "}
                 <img
                   className="flag text-center"
@@ -46,11 +46,11 @@ function Home() {
                   alt="flag"
                 /> <br /> {match.team1}
               </Card.Title>
-              <Card.Title className="col-2 text-center">
+              <Card.Title className="col-4 text-center">
                 {" "}
-                <h5>- -</h5>{" "}
+                    <p className="score">{ match.score[0]} : { match.score[1]}</p>{" "}
               </Card.Title>
-              <Card.Title className="col-5 text-center">
+              <Card.Title className="col-4 text-center">
                 {" "}
                 <img className="flag text-center" src={require(`${match.image[1]}`)} alt="flag" />
                 <br /> {match.team2}{" "}

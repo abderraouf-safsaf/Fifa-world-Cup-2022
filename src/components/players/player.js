@@ -1,8 +1,14 @@
 import React from "react";
 import Badge from "react-bootstrap/Badge";
 
-function Player({  nom, avatar ,flag }) {
-  
+function Player({  nom, avatar ,flag ,match }) {
+
+  const data = require("../../Database/matches.json");
+  const ReelMatche = data.matches;
+
+   
+ 
+  console.log(ReelMatche)
   return (
     <div className="profil container pt-4 ">
       <div className="card container ">
@@ -44,51 +50,35 @@ function Player({  nom, avatar ,flag }) {
                         </tr>
                       </thead>
                       <tbody>
-                        <tr>
-                          <td>Qatar - Equateur</td>
-                          <td className="score text-center ">0 : 0</td>
-                          <td>
-                            20 nov <br /> 5:00PM{" "}
-                          </td>
-                          <td>
-                            <Badge bg="success p-3">3 points</Badge>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>Angleterre - Iran</td>
-                          <td className="score text-center ">5 : 1</td>
-                          <td>
-                            21 nov <br /> 2:00PM{" "}
-                          </td>
-                          <td>
-                            <Badge bg="danger p-3">0 Points</Badge>
-                          </td>
-                        </tr>
-
-                        <tr>
-                          <td>Senegal - Pays-bas</td>
-                          <td className="score text-center ">2 : 1</td>
-                          <td>
-                            21 nov <br /> 5:00PM{" "}
-                          </td>
-                          <td>
-                            <Badge bg="warning p-3" text="dark">
-                              1 point{" "}
-                            </Badge>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>Etats-Unis - Pays de Galles</td>
-                          <td className="score text-center ">0 : 0</td>
-                          <td>
-                            21 nov <br /> 8:00PM{" "}
-                          </td>
-                          <td>
-                            <Badge bg="warning p-3" text="dark">
-                              1 point
-                            </Badge>
-                          </td>
-                        </tr>
+                        {
+                          match.map((todo, index) => {
+                            return (
+                              <tr key = {index}>
+                              <td>{todo.team1} - {todo.team2}</td>
+                              <td className="score text-center ">{todo.score[0]} : {todo.score[1]}</td>
+                              <td>
+                                {todo.date} <br /> {todo.hours}{" "}
+                              </td>
+                                <td>
+                                  {
+                                    JSON.stringify(todo.score) === JSON.stringify(ReelMatche[index].score) &&
+                                    <Badge bg="success p-3">3 points</Badge>
+                                  }
+                                  {
+                                    JSON.stringify(todo.score) !== JSON.stringify(ReelMatche[index].score) &&
+                                    <Badge bg="danger p-3">0 points</Badge>
+                                  }
+                                  
+                                  
+                                
+                              </td>
+                            </tr>
+                            )
+                          })
+                        }
+                       
+                       
+                        
                       </tbody>
                     </table>
                   </div>

@@ -8,16 +8,15 @@ import Footer from "./components/footer";
 import Player from "./components/players/player";
 
 function App() {
-  const data = require("./Database/Players.json");
+  const data2 = require("./Database/Players.json");
  
 
-  const players = data.joueurs;
+  const players = data2.joueurs;
   
-
   
   return (
     <BrowserRouter>
-      <Navbar players={data.joueurs} />
+      <Navbar players={data2.joueurs} />
 
       <Routes>
         <Route path="/Fifa-world-Cup-2022/" element={<Home />} />
@@ -37,7 +36,7 @@ function App() {
               key={index}
               path={`/${player.nom}`}
               element={
-                <Player  nom={player.nom} avatar={player.avatar} flag={player.flag} />
+                <Player nom={player.nom} avatar={player.avatar} flag={player.flag} match={ players[index].matches} />
               }
             />
           );
