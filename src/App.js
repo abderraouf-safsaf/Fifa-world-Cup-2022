@@ -9,16 +9,24 @@ import Player from "./components/players/player";
 
 function App() {
   const data = require("./Database/Players.json");
+ 
 
   const players = data.joueurs;
+  
 
+  
   return (
     <BrowserRouter>
       <Navbar players={data.joueurs} />
 
       <Routes>
         <Route path="/Fifa-world-Cup-2022/" element={<Home />} />
-        <Route path="/" element={<Home />} />
+        <Route path="/"
+          element={
+            <Home
+            />
+          } />
+        
         <Route path="/landing" element={<Landing />} />
 
         {players.map((player, index) => {
