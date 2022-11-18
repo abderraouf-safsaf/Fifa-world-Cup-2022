@@ -33,7 +33,7 @@ function navbar({ players }) {
 
               <NavDropdown title="Joueurs" id="collasible-nav-dropdown">
                 {players.map((player, index) => {
-                  console.log(player);
+                 
                   return (
                     
                   

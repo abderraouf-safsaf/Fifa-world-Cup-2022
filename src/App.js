@@ -13,10 +13,39 @@ function App() {
   const data2 = require("./Database/Players.json");
 
   const players = data2.joueurs;
-  const players2 = data2.joueurs;
-  console.log(players)
-  const [points, setPoints] = useState();
+  const data = require("./Database/matches.json");
+  const ReelMatche = data.matches;
+ const [points, setPoints] = useState(0);
  
+ 
+ console.log( );
+   
+  function addClassment() {
+    for (let i = 0; i < players.length; i++) {
+      for (let j = 0; j < players[0].matches.length; j++) {
+
+        if (ReelMatche[i].score !== null) {
+          if (ReelMatche[j].score[0] === players[i].matches[j].score[0] && ReelMatche[j].score[1] === players[i].matches[j].score[1]) {
+            
+            
+           setPoints(points +3)
+          return  
+          
+          
+        } else if (
+          (ReelMatche[j].score[0] > ReelMatche[j].score[1] && players[i].matches[j].score[0] > players[i].matches[j].score[1]) ||
+          (ReelMatche[j].score[1] > ReelMatche[j].score[0] && players[i].matches[j].score[1] > players[i].matches[j].score[0])
+          ) {
+            
+            setPoints(points +1)
+            return 
+          } 
+        }
+      }
+      } 
+      }
+      
+      
 
   return (
     <BrowserRouter>
@@ -41,8 +70,8 @@ function App() {
                 <Player
                   index = {index}
                   players={players}
-                  classment={setPoints}
                   setClassment={setPoints}
+                  classment={points}
                   nom={player.nom}
                   avatar={player.avatar}
                   flag={player.flag}
