@@ -1,23 +1,24 @@
 {
   "files": {
-    "main.css": "/Fifa-world-Cup-2022/static/css/main.0fc27e6a.css",
-    "main.js": "/Fifa-world-Cup-2022/static/js/main.2732e7a4.js",
+    "main.css": "/Fifa-world-Cup-2022/static/css/main.345afae7.css",
+    "main.js": "/Fifa-world-Cup-2022/static/js/main.53347bbd.js",
     "static/js/787.daad49d3.chunk.js": "/Fifa-world-Cup-2022/static/js/787.daad49d3.chunk.js",
     "static/media/avatar3.jpg": "/Fifa-world-Cup-2022/static/media/avatar3.0f18a05b1ba45b7ad326.jpg",
     "static/media/avatar2.jpg": "/Fifa-world-Cup-2022/static/media/avatar2.d294fafd0c9243d7b8eb.jpg",
+    "static/media/avatar4.jpg": "/Fifa-world-Cup-2022/static/media/avatar4.ded78201fa6beda33c9e.jpg",
     "static/media/avatar1.jpg": "/Fifa-world-Cup-2022/static/media/avatar1.49249d237e9c52a10e4c.jpg",
     "static/media/logo.svg": "/Fifa-world-Cup-2022/static/media/logo.dc32dc6c3e2df586ffab9866e3108cca.svg",
     "static/media/logo.png": "/Fifa-world-Cup-2022/static/media/logo.dfb613d5048f27813f85.png",
-    "static/media/equador.jpg": "/Fifa-world-Cup-2022/static/media/equador.42b686edfe7eb874ad70.jpg",
-    "static/media/qatar.jpg": "/Fifa-world-Cup-2022/static/media/qatar.0808f50397609456fb71.jpg",
+    "static/media/equador.png": "/Fifa-world-Cup-2022/static/media/equador.42b686edfe7eb874ad70.png",
+    "static/media/qatar.png": "/Fifa-world-Cup-2022/static/media/qatar.0808f50397609456fb71.png",
     "static/media/cup.svg": "/Fifa-world-Cup-2022/static/media/cup.170b53d964cb2c8555874f9b70755ae0.svg",
     "index.html": "/Fifa-world-Cup-2022/index.html",
-    "main.0fc27e6a.css.map": "/Fifa-world-Cup-2022/static/css/main.0fc27e6a.css.map",
-    "main.2732e7a4.js.map": "/Fifa-world-Cup-2022/static/js/main.2732e7a4.js.map",
+    "main.345afae7.css.map": "/Fifa-world-Cup-2022/static/css/main.345afae7.css.map",
+    "main.53347bbd.js.map": "/Fifa-world-Cup-2022/static/js/main.53347bbd.js.map",
     "787.daad49d3.chunk.js.map": "/Fifa-world-Cup-2022/static/js/787.daad49d3.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.0fc27e6a.css",
-    "static/js/main.2732e7a4.js"
+    "static/css/main.345afae7.css",
+    "static/js/main.53347bbd.js"
   ]
 }
