@@ -1,35 +1,47 @@
-import React, { useState } from "react";
+import React,  {useEffect, useState} from "react";
 import Badge from "react-bootstrap/Badge";
 
 function Player({ nom, avatar, flag, match }) {
   const data = require("../../Database/matches.json");
   const ReelMatche = data.matches;
-  const [Win, setWin] = useState();
+  const [points, setPoints] = useState(0);
+  
 
-  const teamWin = (RTeam1, PTeam1) => {
-   
+  
+
+ 
+  function addPoints(RTeam1, PTeam1) {
+    
     if (RTeam1[0] !== null) {
-        
-      
       if (RTeam1[0] === PTeam1[0] && RTeam1[1] === PTeam1[1]) {
          
-          return <Badge bg="success p-3">3 points</Badge>;
-        } else if (
-          ((RTeam1[0] > RTeam1[1] )&& (PTeam1[0] > PTeam1[1])) ||
-          ((RTeam1[1] > RTeam1[0]) && (PTeam1[1] > PTeam1[0]))
-          ) {
-            
-            return <Badge bg="warning p-3">1 points</Badge>;
-          } else {
-            return <Badge bg="danger p-3">0 points</Badge>;
-          }
-          
-    } else {
-      return <Badge  bg="light" text="dark"> -----------</Badge>;
-        }
+       
+       
+        console.log("3")
+        return (
+          <Badge bg="success p-3">3 points</Badge>
+         
         
-  }
-  
+        )
+
+        
+
+      } else if (
+        (RTeam1[0] > RTeam1[1] && PTeam1[0] > PTeam1[1]) ||
+        (RTeam1[1] > RTeam1[0] && PTeam1[1] > PTeam1[0])
+      ) {
+        console.log("1")
+        return <Badge bg="warning p-3">1 points</Badge>;
+      } else {
+        return <Badge bg="danger p-3">0 points</Badge>;
+      }
+    } else {
+      console.log("0")
+      return <Badge bg="light" text="dark">
+       -------------</Badge>;
+    }
+  };
+
   return (
     <div className="profil container pt-4 ">
       <div className="card container ">
@@ -85,13 +97,10 @@ function Player({ nom, avatar, flag, match }) {
                               </td>
                               <td>
                                 {
-                                   
-                                   ReelMatche[index].score !== null &&
-                                  teamWin(ReelMatche[index].score,match.score) 
-                                
-                              
-                                }
-                                
+                                  addPoints(
+                                  ReelMatche[index].score,
+                                  match.score
+                                )}
                               </td>
                             </tr>
                           );

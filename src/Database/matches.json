@@ -19,7 +19,7 @@
       "group": "Groupe B",
       "stadium" : "Khalifa Stadium",
       "image" : ["./img/flag/angletairre.png" , "./img/flag/iran.png"],
-      "score": [ 5 , 0 ]
+      "score": [ 1 , 1 ]
     },
     {
       "date": "21 nov.2022",
@@ -29,7 +29,7 @@
       "group": "Groupe A",
       "stadium" : "AL Thumama Stadium",
       "image" : ["./img/flag/senegal.png" , "./img/flag/pays-bas.png"],
-      "score": [ 4 , 2 ]
+      "score": [ null ]
     },
     {
       "date": "21 nov.2022",

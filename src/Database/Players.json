@@ -25,7 +25,7 @@
               "group": "Groupe B",
               "stadium" : "Khalifa Stadium",
               "image" : ["./img/flag/angletairre.png" , "./img/flag/iran.png"],
-              "score": [ 1 , 0 ]
+              "score": [ 1 , 1 ]
             },
             {
               "date": "21 nov.2022",
