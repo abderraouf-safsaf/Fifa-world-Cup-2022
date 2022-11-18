@@ -1,14 +1,35 @@
-import React from "react";
+import React, { useState } from "react";
 import Badge from "react-bootstrap/Badge";
 
-function Player({  nom, avatar ,flag ,match }) {
-
+function Player({ nom, avatar, flag, match }) {
   const data = require("../../Database/matches.json");
   const ReelMatche = data.matches;
+  const [Win, setWin] = useState();
 
+  const teamWin = (RTeam1, PTeam1) => {
    
- 
-  console.log(ReelMatche)
+    if (RTeam1[0] !== null) {
+        
+      
+      if (RTeam1[0] === PTeam1[0] && RTeam1[1] === PTeam1[1]) {
+         
+          return <Badge bg="success p-3">3 points</Badge>;
+        } else if (
+          ((RTeam1[0] > RTeam1[1] )&& (PTeam1[0] > PTeam1[1])) ||
+          ((RTeam1[1] > RTeam1[0]) && (PTeam1[1] > PTeam1[0]))
+          ) {
+            
+            return <Badge bg="warning p-3">1 points</Badge>;
+          } else {
+            return <Badge bg="danger p-3">0 points</Badge>;
+          }
+          
+    } else {
+      return <Badge  bg="light" text="dark"> -----------</Badge>;
+        }
+        
+  }
+  
   return (
     <div className="profil container pt-4 ">
       <div className="card container ">
@@ -50,35 +71,31 @@ function Player({  nom, avatar ,flag ,match }) {
                         </tr>
                       </thead>
                       <tbody>
-                        {
-                          match.map((todo, index) => {
-                            return (
-                              <tr key = {index}>
-                              <td>{todo.team1} - {todo.team2}</td>
-                              <td className="score text-center ">{todo.score[0]} : {todo.score[1]}</td>
+                        {match.map((match, index) => {
+                          return (
+                            <tr key={index}>
                               <td>
-                                {todo.date} <br /> {todo.hours}{" "}
+                                {match.team1} - {match.team2}
                               </td>
-                                <td>
-                                  {
-                                    JSON.stringify(todo.score) === JSON.stringify(ReelMatche[index].score) &&
-                                    <Badge bg="success p-3">3 points</Badge>
-                                  }
-                                  {
-                                    JSON.stringify(todo.score) !== JSON.stringify(ReelMatche[index].score) &&
-                                    <Badge bg="danger p-3">0 points</Badge>
-                                  }
-                                  
-                                  
+                              <td className="score text-center ">
+                                {match.score[0]} : {match.score[1]}
+                              </td>
+                              <td>
+                                {match.date} <br /> {match.hours}{" "}
+                              </td>
+                              <td>
+                                {
+                                   
+                                   ReelMatche[index].score !== null &&
+                                  teamWin(ReelMatche[index].score,match.score) 
+                                
+                              
+                                }
                                 
                               </td>
                             </tr>
-                            )
-                          })
-                        }
-                       
-                       
-                        
+                          );
+                        })}
                       </tbody>
                     </table>
                   </div>

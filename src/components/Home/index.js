@@ -7,7 +7,7 @@ function Home() {
   
   const data = require("../../Database/matches.json");
   const matches = data.matches;
-  console.log(matches)
+  
   return (
     <div className="home container">
       <img src={logo} alt="logo" />

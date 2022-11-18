@@ -14,7 +14,7 @@
               "group": "Groupe A",
               "stadium" : "AL Bayt Stadium",
               "image" : ["./img/flag/qatar.png" , "./img/flag/equador.png"],
-              "score": [ 0 , 0 ]
+              "score": [ 2, 1 ]
               
             },
             {
@@ -25,7 +25,7 @@
               "group": "Groupe B",
               "stadium" : "Khalifa Stadium",
               "image" : ["./img/flag/angletairre.png" , "./img/flag/iran.png"],
-              "score": [ 1 , 1 ]
+              "score": [ 1 , 0 ]
             },
             {
               "date": "21 nov.2022",
@@ -35,7 +35,7 @@
               "group": "Groupe A",
               "stadium" : "AL Thumama Stadium",
               "image" : ["./img/flag/senegal.png" , "./img/flag/pays-bas.png"],
-              "score": [ 0 , 0 ]
+              "score": [ 2 , 0 ]
             },
             {
               "date": "21 nov.2022",
@@ -45,7 +45,7 @@
               "group": "Groupe A",
               "stadium" : "AL Rayyan Stadium",
               "image" : ["./img/flag/etats-unis.png" , "./img/flag/pays de galles.png"],
-              "score": [ 0 , 0 ]
+              "score": [ 1 , 2 ]
             }
           ]
       },
@@ -53,7 +53,50 @@
         "id" :"1",
         "nom" : "Dahmani Djamel",
         "avatar": "./imgPlayers/avatar2.jpg",
-        "flag": "./imgPlayers/france.png"
+        "flag": "./imgPlayers/france.png",
+        "matches": [
+          {
+            "date": "20 nov.2022",
+            "hours":"2:00 PM",
+            "team1": "Qatar",
+            "team2": "Equateur",
+            "group": "Groupe A",
+            "stadium" : "AL Bayt Stadium",
+            "image" : ["./img/flag/qatar.png" , "./img/flag/equador.png"],
+            "score": [ 2, 1 ]
+            
+          },
+          {
+            "date": "21 nov.2022",
+            "hours":"2:00 PM",
+            "team1": "Angleterre",
+            "team2": "Iran",
+            "group": "Groupe B",
+            "stadium" : "Khalifa Stadium",
+            "image" : ["./img/flag/angletairre.png" , "./img/flag/iran.png"],
+            "score": [ 1 , 0 ]
+          },
+          {
+            "date": "21 nov.2022",
+            "hours":"5:00 PM",
+            "team1": "Sénégal",
+            "team2": "Pays-Bas",
+            "group": "Groupe A",
+            "stadium" : "AL Thumama Stadium",
+            "image" : ["./img/flag/senegal.png" , "./img/flag/pays-bas.png"],
+            "score": [ 2 , 0 ]
+          },
+          {
+            "date": "21 nov.2022",
+            "hours":"8:00 PM",
+            "team1": "Etats-Unis",
+            "team2": "Pays de Galles",
+            "group": "Groupe A",
+            "stadium" : "AL Rayyan Stadium",
+            "image" : ["./img/flag/etats-unis.png" , "./img/flag/pays de galles.png"],
+            "score": [ 1 , 2 ]
+          }
+        ]
         
       },
       {
