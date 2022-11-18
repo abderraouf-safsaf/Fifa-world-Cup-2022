@@ -1,46 +1,43 @@
-import React,  {useEffect, useState} from "react";
+import React, { useEffect, useState } from "react";
 import Badge from "react-bootstrap/Badge";
 
-function Player({ nom, avatar, flag, match }) {
+function Player({ nom, avatar, flag, match,classment,players,index }) {
   const data = require("../../Database/matches.json");
   const ReelMatche = data.matches;
-  const [points, setPoints] = useState(0);
-  
-
-  
-
+  const [points, setPoints] = useState();
+  let count = 0;
  
-  function addPoints(RTeam1, PTeam1) {
+  players[index].points = points;
+  
+  useEffect(() => {
     
+    setPoints(count);
+    classment(count)
+  });
+
+  function addPoints(RTeam1, PTeam1) {
     if (RTeam1[0] !== null) {
       if (RTeam1[0] === PTeam1[0] && RTeam1[1] === PTeam1[1]) {
-         
-       
-       
-        console.log("3")
-        return (
-          <Badge bg="success p-3">3 points</Badge>
-         
-        
-        )
-
-        
-
+        count = count + 3;
+          
+        return <Badge bg="success p-3">3 points</Badge>;
       } else if (
         (RTeam1[0] > RTeam1[1] && PTeam1[0] > PTeam1[1]) ||
         (RTeam1[1] > RTeam1[0] && PTeam1[1] > PTeam1[0])
       ) {
-        console.log("1")
+        count = count + 1;
         return <Badge bg="warning p-3">1 points</Badge>;
       } else {
         return <Badge bg="danger p-3">0 points</Badge>;
       }
     } else {
-      console.log("0")
-      return <Badge bg="light" text="dark">
-       -------------</Badge>;
+      return (
+        <Badge bg="light" text="dark">
+          -------------
+        </Badge>
+      );
     }
-  };
+  }
 
   return (
     <div className="profil container pt-4 ">
@@ -54,10 +51,12 @@ function Player({ nom, avatar, flag, match }) {
             />
           </div>
           <div className="col-6">
-            <img className="flag-profil" src={require(`${flag}`)} alt="flag" />
+            <img className="flag-profil" src={require(`.${flag}`)} alt="flag" />
             <h1 className="text-profil">{nom}</h1>
             <hr />
-            <h1 className="text-center text-primary fw-bold">0 Points</h1>
+            <h1 className="text-center text-primary fw-bold">
+              {points} Points
+            </h1>
           </div>
         </div>
       </div>
@@ -84,6 +83,7 @@ function Player({ nom, avatar, flag, match }) {
                       </thead>
                       <tbody>
                         {match.map((match, index) => {
+                          
                           return (
                             <tr key={index}>
                               <td>
@@ -96,8 +96,7 @@ function Player({ nom, avatar, flag, match }) {
                                 {match.date} <br /> {match.hours}{" "}
                               </td>
                               <td>
-                                {
-                                  addPoints(
+                                {addPoints(
                                   ReelMatche[index].score,
                                   match.score
                                 )}

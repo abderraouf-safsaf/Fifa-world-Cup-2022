@@ -8,7 +8,7 @@
       "group": "Groupe A",
       "stadium" : "AL Bayt Stadium",
       "image" : ["./img/flag/qatar.png" , "./img/flag/equador.png"],
-      "score": [2, 1 ]
+      "score": [2,1 ]
       
     },
     {
@@ -19,7 +19,7 @@
       "group": "Groupe B",
       "stadium" : "Khalifa Stadium",
       "image" : ["./img/flag/angletairre.png" , "./img/flag/iran.png"],
-      "score": [ 1 , 1 ]
+      "score": [ 1,0 ]
     },
     {
       "date": "21 nov.2022",
@@ -29,7 +29,7 @@
       "group": "Groupe A",
       "stadium" : "AL Thumama Stadium",
       "image" : ["./img/flag/senegal.png" , "./img/flag/pays-bas.png"],
-      "score": [ null ]
+      "score": [ 2,0 ] 
     },
     {
       "date": "21 nov.2022",

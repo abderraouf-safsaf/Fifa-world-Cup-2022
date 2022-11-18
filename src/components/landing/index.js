@@ -1,10 +1,16 @@
 import React from "react";
 import france from "./img/flag/france.png";
-import argentine from "./img/flag/argentine.png";
-import portugal from "./img/flag/portugal.png";
 import cup from "./img/cup.svg";
 
-function Landing() {
+function Landing({ classment, flag ,players}) {
+ 
+  let classments = players;
+
+  classments.sort((a, b) => (a.points < b.points ? 1 : -1))
+
+console.log(classments)
+
+
   return (
     <div className="profil">
       <img className="cup-svg" src={cup} alt="" />
@@ -34,42 +40,24 @@ function Landing() {
                         </tr>
                       </thead>
                       <tbody>
-                        <tr>
-                          <td>1</td>
-                          <td colSpan={2}>
-                            <img
-                              className="flag-classment"
-                              src={france}
-                              alt="flag"
-                            />
-                            {"-"} Dahmani Djamel
-                          </td>
-                          <td className="text-center fw-bolder">60</td>
-                        </tr>
-                        <tr>
-                          <td>2</td>
-                          <td colSpan={2}>
-                            <img
-                              className="flag-classment"
-                              src={argentine}
-                              alt="flag"
-                            />
-                            {"-"} Nouar Salah Eddine
-                          </td>
-                          <td className="text-center fw-bolder">45</td>
-                        </tr>
-                        <tr>
-                          <td>3</td>
-                          <td colSpan={2}>
-                            <img
-                              className="flag-classment"
-                              src={portugal}
-                              alt="flag"
-                            />
-                            {"-"} Bouchakouri Bilal
-                          </td>
-                          <td className="text-center fw-bolder">0</td>
-                        </tr>
+                        {classments.map((todo, index) => {
+                          return (
+                            <tr key={index}>
+                              <td>{index+1}</td>
+                              <td colSpan={2}>
+                                <img
+                                  className="flag-classment"
+                                  src={require(`../players${todo.flag}`)}
+                                  alt="flag"
+                                />
+                                {"-"} {classments[index].nom}
+                              </td>
+                              <td className="text-center fw-bolder">
+                                {classments[index].points}
+                              </td>
+                            </tr>
+                          );
+                        })}
                       </tbody>
                     </table>
                   </div>
