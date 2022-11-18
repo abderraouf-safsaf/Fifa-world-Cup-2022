@@ -5,7 +5,7 @@
           "nom" : "Nouar Salah Eddine",
           "avatar": "./imgPlayers/avatar1.jpg",
           "flag": "/imgPlayers/argentine.png",
-          "points" : "0",
+          "points" : 0,
           "matches": [
             {
               "date": "20 nov.2022",
@@ -55,7 +55,7 @@
         "nom" : "Dahmani Djamel",
         "avatar": "./imgPlayers/avatar2.jpg",
         "flag": "/imgPlayers/france.png",
-        "points" : "0",
+        "points" : 0,
         "matches": [
           {
             "date": "20 nov.2022",
@@ -106,7 +106,7 @@
         "nom" : "Bouchakouri Bilal",
         "avatar": "./imgPlayers/avatar3.jpg",
         "flag": "/imgPlayers/portugal.png",
-        "points" : "0",
+        "points" : 0,
         "matches": [
           {
             "date": "20 nov.2022",
@@ -156,7 +156,7 @@
         "nom" : "Gouasmi Halim",
         "avatar": "./imgPlayers/avatar4.jpg",
         "flag": "/imgPlayers/argentine.png",
-        "points" : "0",
+        "points" : 0,
         "matches": [
           {
             "date": "20 nov.2022",
