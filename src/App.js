@@ -14,13 +14,13 @@ function App() {
 
   const players = data2.joueurs;
   const players2 = data2.joueurs;
-
+  console.log(players)
   const [points, setPoints] = useState();
  
 
   return (
     <BrowserRouter>
-      <Navbar players={data2.joueurs} />
+      <Navbar players={players} />
 
       <Routes>
         <Route path="/Fifa-world-Cup-2022/" element={<Home />} />

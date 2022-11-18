@@ -5,6 +5,7 @@
           "nom" : "Nouar Salah Eddine",
           "avatar": "./imgPlayers/avatar1.jpg",
           "flag": "/imgPlayers/argentine.png",
+          "points" : "null",
           "matches": [
             {
               "date": "20 nov.2022",
@@ -54,6 +55,7 @@
         "nom" : "Dahmani Djamel",
         "avatar": "./imgPlayers/avatar2.jpg",
         "flag": "/imgPlayers/france.png",
+        "points" : "null",
         "matches": [
           {
             "date": "20 nov.2022",
@@ -63,7 +65,7 @@
             "group": "Groupe A",
             "stadium" : "AL Bayt Stadium",
             "image" : ["./img/flag/qatar.png" , "./img/flag/equador.png"],
-            "score": [ 2, 1 ]
+            "score": [ 3, 1 ]
             
           },
           {
@@ -104,6 +106,7 @@
         "nom" : "Bouchakouri Bilal",
         "avatar": "./imgPlayers/avatar3.jpg",
         "flag": "/imgPlayers/portugal.png",
+        "points" : "null",
         "matches": [
           {
             "date": "20 nov.2022",
@@ -153,6 +156,7 @@
         "nom" : "Gouasmi Halim",
         "avatar": "./imgPlayers/avatar4.jpg",
         "flag": "/imgPlayers/argentine.png",
+        "points" : "null",
         "matches": [
           {
             "date": "20 nov.2022",
