@@ -46,7 +46,9 @@ function App() {
       <Navbar players={players} />
 
       <Routes>
-        <Route path="/Fifa-world-Cup-2022/" element={<Home  />} />
+        <Route path="/Fifa-world-Cup-2022/" element={<Home matches={ReelMatche}  ReelMatche={ReelMatche}
+                  
+                  players={players}   />} />
         <Route path="/" element={<Home matches={ReelMatche}  ReelMatche={ReelMatche}
                   
                   players={players}   />} />
