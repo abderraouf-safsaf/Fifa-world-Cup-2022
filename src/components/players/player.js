@@ -1,27 +1,23 @@
 import React, { useEffect, useState } from "react";
 import Badge from "react-bootstrap/Badge";
 
-function Player({ nom, avatar, flag, match,classment,setClassment,players,index }) {
+function Player({ nom, avatar, flag, match,players,index }) {
   const data = require("../../Database/matches.json");
   const ReelMatche = data.matches;
-  const [points, setPoints] = useState();
-  let count = 0;
+  
+  
  
- 
+ console.log(players[index].points)
    
-  useEffect(() => {
-    players[index].points = classment;
-    
-   setClassment(count)
-  });
+  
 
   function addPoints(RTeam1, PTeam1) {
     
     if (RTeam1[0] !== null) {
       if (RTeam1[0] === PTeam1[0] && RTeam1[1] === PTeam1[1]) {
           
-        // setClassment(classment+3)
-        count = count +3
+      
+       
         return (
           
           <Badge bg="success p-3">3 points</Badge>);
@@ -29,7 +25,7 @@ function Player({ nom, avatar, flag, match,classment,setClassment,players,index 
         (RTeam1[0] > RTeam1[1] && PTeam1[0] > PTeam1[1]) ||
         (RTeam1[1] > RTeam1[0] && PTeam1[1] > PTeam1[0])
       ) {
-        count = count +1
+       
         
         return <Badge bg="warning p-3">1 points</Badge>;
       } else {
@@ -61,7 +57,7 @@ function Player({ nom, avatar, flag, match,classment,setClassment,players,index 
             <h1 className="text-profil">{nom}</h1>
             <hr />
             <h1 className="text-center text-primary fw-bold">
-              {classment} Points
+              {players[index].points} Points
             </h1>
           </div>
         </div>

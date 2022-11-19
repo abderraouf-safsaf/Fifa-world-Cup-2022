@@ -14,8 +14,8 @@ function App() {
   const players = data2.joueurs;
   const data = require("./Database/matches.json");
   const ReelMatche = data.matches;
-  const [points, setPoints] = useState(0);
-
+  // const [points, setPoints] = useState(0);
+  
   useEffect(() => {
     for (let i = 0; i < players.length; i++) {
       
@@ -42,30 +42,7 @@ function App() {
     
   },[]);
 
-  function addClassment() {
-    for (let i = 0; i < players.length; i++) {
-      for (let j = 0; j < players[0].matches.length; j++) {
-        if (ReelMatche[i].score !== null) {
-          if (
-            ReelMatche[j].score[0] === players[i].matches[j].score[0] &&
-            ReelMatche[j].score[1] === players[i].matches[j].score[1]
-          ) {
-            setPoints(points + 3);
-            return;
-          } else if (
-            (ReelMatche[j].score[0] > ReelMatche[j].score[1] &&
-              players[i].matches[j].score[0] >
-                players[i].matches[j].score[1]) ||
-            (ReelMatche[j].score[1] > ReelMatche[j].score[0] &&
-              players[i].matches[j].score[1] > players[i].matches[j].score[0])
-          ) {
-            setPoints(points + 1);
-            return;
-          }
-        }
-      }
-    }
-  }
+ 
 
   return (
     <BrowserRouter>
@@ -78,7 +55,7 @@ function App() {
         <Route
           path="/landing"
           element={
-            <Landing players={players} flag={players.flag} classment={points} />
+            <Landing players={players} flag={players.flag} classment={players.points} />
           }
         />
 
@@ -91,8 +68,8 @@ function App() {
                 <Player
                   index={index}
                   players={players}
-                  setClassment={setPoints}
-                  classment={points}
+                  
+                  
                   nom={player.nom}
                   avatar={player.avatar}
                   flag={player.flag}
