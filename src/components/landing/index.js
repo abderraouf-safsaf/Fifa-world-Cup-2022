@@ -1,18 +1,8 @@
-import React,{useState , useEffect} from "react";
+import React, { useState, useEffect } from "react";
 
 import cup from "./img/cup.svg";
 
-function Landing({ players ,classments,flag}) {
- 
-
-
- 
-
-  
-
-
-
-
+function Classments({  classments }) {
   return (
     <div className="profil">
       <img className="cup-svg" src={cup} alt="" />
@@ -45,7 +35,7 @@ function Landing({ players ,classments,flag}) {
                         {classments.map((todo, index) => {
                           return (
                             <tr key={index}>
-                              <td>{index+1}</td>
+                              <td>{index + 1}</td>
                               <td colSpan={2}>
                                 <img
                                   className="flag-classment"
@@ -73,4 +63,4 @@ function Landing({ players ,classments,flag}) {
   );
 }
 
-export default Landing;
+export default Classments;
