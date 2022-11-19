@@ -40,7 +40,7 @@ function App() {
      
     }
     
-  });
+  },[]);
 
   function addClassment() {
     for (let i = 0; i < players.length; i++) {
