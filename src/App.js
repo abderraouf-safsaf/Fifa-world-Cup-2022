@@ -9,12 +9,14 @@ import Footer from "./components/footer";
 import Player from "./components/players/player";
 
 function App() {
+  
   const data2 = require("./Database/Players.json");
+  
 
   const players = data2.joueurs;
   const data = require("./Database/matches.json");
   const ReelMatche = data.matches;
-  const classments = players;
+  const classments = [...players];
   
 
 
@@ -23,7 +25,7 @@ function App() {
   
     
   
-  
+  console.log( data2.joueurs,players , classments);
  
   
 
@@ -52,7 +54,8 @@ function App() {
       }
      
     }
-    classments.sort((a, b) => (a.points < b.points ? 1 : -1))
+    classments.sort((a, b) => (a.points < b.points ? 1 : -1));
+    
   },[]);
 
  
@@ -68,7 +71,7 @@ function App() {
         <Route
           path="/landing"
           element={
-            <Landing players={players} flag={players.flag} classment={players.points} classments={classments} />
+            <Landing players={players} flag={players.flag} classments={classments} />
           }
         />
 

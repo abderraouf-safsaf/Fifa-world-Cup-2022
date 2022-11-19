@@ -2,12 +2,12 @@ import React,{useState , useEffect} from "react";
 
 import cup from "./img/cup.svg";
 
-function Landing({ classments}) {
+function Landing({ players ,classments,flag}) {
  
-//  const  [classments , setClassments] = useState(classments1)
+
 
  
- 
+
   
 
 
