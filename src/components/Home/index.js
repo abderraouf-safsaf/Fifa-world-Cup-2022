@@ -1,13 +1,11 @@
 import React from "react";
 import logo from "./img/logo.svg";
-import { Card, Button } from "react-bootstrap";
-
+import { Form, Card, Button } from "react-bootstrap";
 
 function Home() {
-  
   const data = require("../../Database/matches.json");
   const matches = data.matches;
-  
+
   return (
     <div className="home container">
       <img src={logo} alt="logo" />
@@ -25,45 +23,62 @@ function Home() {
         aujourd'hui sur cette page. Les rencontres sont classées par Groupe
       </h6>
       <div className="row mb-0 m-4">
-        {
-          matches.map((match, index) => {
-           
-            return (
-            <Card className="card-match" key = {index}>
-            <Card.Header>
-              {match.group} <br />
-              {match.stadium}Qatar
-              <span className="card-date text-center">
-                {match.date} <br /> {match.hours}
-              </span>
-            </Card.Header>
-            <Card.Body className="row">
-              <Card.Title className="col-4 text-center">
-                {" "}
-                <img
-                  className="flag text-center"
-                  src={require(`${match.image[0]}`)}
-                  alt="flag"
-                /> <br /> {match.team1}
-              </Card.Title>
-              <Card.Title className="col-4 text-center">
-                {" "}
-                    <p className="score">{ match.score[0]} : { match.score[1]}</p>{" "}
-              </Card.Title>
-              <Card.Title className="col-4 text-center">
-                {" "}
-                <img className="flag text-center" src={require(`${match.image[1]}`)} alt="flag" />
-                <br /> {match.team2}{" "}
-              </Card.Title>
-  
-              <Button variant="primary">Validez le Resultat</Button>
-            </Card.Body>
-          </Card>)
-             })
+        {matches.map((match, index) => {
+          return (
+            <Card className="card-match" key={index}>
+              <Card.Header>
+                {match.group} <br />
+                {match.stadium}Qatar
+                <span className="card-date text-center">
+                  {match.date} <br /> {match.hours}
+                </span>
+              </Card.Header>
+              <Card.Body className="row">
+                <Card.Title className="col-4 text-center">
+                  {" "}
+                  <img
+                    className="flag text-center"
+                    src={require(`${match.image[0]}`)}
+                    alt="flag"
+                  />{" "}
+                  <br /> {match.team1}
+                </Card.Title>
+                <Card.Title className="col-4 text-center">
+                  {" "}
+                  <p className="score">
+                    {match.score[0]} : {match.score[1]}
+                  </p>{" "}
+                </Card.Title>
+                <Card.Title className="col-4 text-center">
+                  {" "}
+                  <img
+                    className="flag text-center"
+                    src={require(`${match.image[1]}`)}
+                    alt="flag"
+                  />
+                  <br /> {match.team2}{" "}
+                </Card.Title>
+                <hr />
+                <Form className="text-center">
+                  <Form.Group className="mb-3">
+                    
+                    <Form.Control type="text" placeholder={match.team1} />
+                    
+                  </Form.Group>
 
-        }
-        
-       
+                  <Form.Group className="mb-3">
+                    
+                    <Form.Control type="text" placeholder={match.team2} />
+                  </Form.Group>
+                  
+                  <Button variant="primary" type="submit">
+                    Validez le Score
+                  </Button>
+                </Form>
+              </Card.Body>
+            </Card>
+          );
+        })}
       </div>
     </div>
   );

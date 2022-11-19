@@ -49,13 +49,7 @@ function App() {
 
         <Route
           path="/landing"
-          element={
-            <Classments 
-              
-            
-              classments={classments}
-            />
-          }
+          element={<Classments classments={classments} />}
         />
 
         {players.map((player, index) => {
