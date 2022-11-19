@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Fifa-world-Cup-2022/static/css/main.345afae7.css",
-    "main.js": "/Fifa-world-Cup-2022/static/js/main.aea0c5d9.js",
+    "main.js": "/Fifa-world-Cup-2022/static/js/main.e319ac61.js",
     "static/js/787.daad49d3.chunk.js": "/Fifa-world-Cup-2022/static/js/787.daad49d3.chunk.js",
     "static/media/avatar3.jpg": "/Fifa-world-Cup-2022/static/media/avatar3.0f18a05b1ba45b7ad326.jpg",
     "static/media/avatar2.jpg": "/Fifa-world-Cup-2022/static/media/avatar2.d294fafd0c9243d7b8eb.jpg",
@@ -14,11 +14,11 @@
     "static/media/cup.svg": "/Fifa-world-Cup-2022/static/media/cup.170b53d964cb2c8555874f9b70755ae0.svg",
     "index.html": "/Fifa-world-Cup-2022/index.html",
     "main.345afae7.css.map": "/Fifa-world-Cup-2022/static/css/main.345afae7.css.map",
-    "main.aea0c5d9.js.map": "/Fifa-world-Cup-2022/static/js/main.aea0c5d9.js.map",
+    "main.e319ac61.js.map": "/Fifa-world-Cup-2022/static/js/main.e319ac61.js.map",
     "787.daad49d3.chunk.js.map": "/Fifa-world-Cup-2022/static/js/787.daad49d3.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.345afae7.css",
-    "static/js/main.aea0c5d9.js"
+    "static/js/main.e319ac61.js"
   ]
 }
