@@ -1,25 +1,49 @@
-import React,{useState} from "react";
+import React,{useState,useEffect} from "react";
 import logo from "./img/logo.svg";
 import { Form, Card, Button } from "react-bootstrap";
-import Badge from "react-bootstrap/Badge";
-function Home({matches}) {
-  // const data = require("../../Database/matches.json");
-  // const matches = data.matches;
+
+function Home({matches,ReelMatche,players,classments}) {
+  
+
   const [addScore1, setAddScore1] = useState("")
   const [addScore2, setAddScore2] = useState("")
  
- 
 
+  useEffect(() => {
+    if (ReelMatche[0] !== null) {
+      for (let i = 0; i < players.length; i++) {
+        for (let j = 0; j < ReelMatche.length; j++) {
+          if (
+            ReelMatche[j].score[0] === players[i].matches[j].score[0] &&
+            ReelMatche[j].score[1] === players[i].matches[j].score[1]
+          ) {
+            players[i].points += 3;
+          } else if (
+            (ReelMatche[j].score[0] > ReelMatche[j].score[1] &&
+              players[i].matches[j].score[0] > players[i].matches[j].score[1]) ||
+            (ReelMatche[j].score[1] > ReelMatche[j].score[0] &&
+              players[i].matches[j].score[1] > players[i].matches[j].score[0])
+          ) {
+            players[i].points += 1;
+          }
+        }
+      }
+    }
+    
+    console.log(ReelMatche)
+  });
+  
+ 
   const verifier = (matches) => {
     const handleSubmit = (e) => {
       e.preventDefault();
   
-     
+      
       
       
       matches.score= [+addScore1 , +addScore2]
       
-      console.log(matches.score)
+      
       setAddScore1('');
       setAddScore2('');
       

@@ -15,31 +15,31 @@ function App() {
   const ReelMatche = data.matches;
   
   const classments = [...players];
-  
-  
 
-  useEffect(() => {
-    if (ReelMatche[0] !== null) {
-      for (let i = 0; i < players.length; i++) {
-        for (let j = 0; j < ReelMatche.length; j++) {
-          if (
-            ReelMatche[j].score[0] === players[i].matches[j].score[0] &&
-            ReelMatche[j].score[1] === players[i].matches[j].score[1]
-          ) {
-            players[i].points += 3;
-          } else if (
-            (ReelMatche[j].score[0] > ReelMatche[j].score[1] &&
-              players[i].matches[j].score[0] > players[i].matches[j].score[1]) ||
-            (ReelMatche[j].score[1] > ReelMatche[j].score[0] &&
-              players[i].matches[j].score[1] > players[i].matches[j].score[0])
-          ) {
-            players[i].points += 1;
-          }
-        }
-      }
-    }
-    classments.sort((a, b) => (a.points < b.points ? 1 : -1));
-  }, [ReelMatche]);
+ 
+  // useEffect(() => {
+  //   if (ReelMatche[0] !== null) {
+  //     for (let i = 0; i < players.length; i++) {
+  //       for (let j = 0; j < ReelMatche.length; j++) {
+  //         if (
+  //           ReelMatche[j].score[0] === players[i].matches[j].score[0] &&
+  //           ReelMatche[j].score[1] === players[i].matches[j].score[1]
+  //         ) {
+  //           players[i].points += 3;
+  //         } else if (
+  //           (ReelMatche[j].score[0] > ReelMatche[j].score[1] &&
+  //             players[i].matches[j].score[0] > players[i].matches[j].score[1]) ||
+  //           (ReelMatche[j].score[1] > ReelMatche[j].score[0] &&
+  //             players[i].matches[j].score[1] > players[i].matches[j].score[0])
+  //         ) {
+  //           players[i].points += 1;
+  //         }
+  //       }
+  //     }
+  //   }
+  //   classments.sort((a, b) => (a.points < b.points ? 1 : -1));
+  //   console.log(ReelMatche)
+  // });
 
   return (
     <BrowserRouter>
@@ -48,7 +48,7 @@ function App() {
       <Routes>
         <Route path="/Fifa-world-Cup-2022/" element={<Home matches={ReelMatche}  ReelMatche={ReelMatche}
                   
-                  players={players}   />} />
+                  classments={classments}    players={players}   />} />
         <Route path="/" element={<Home matches={ReelMatche}  ReelMatche={ReelMatche}
                   
                   players={players}   />} />

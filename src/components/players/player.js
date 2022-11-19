@@ -6,10 +6,9 @@ function Player({ReelMatche, nom, avatar, flag, match, players, index }) {
   // const data = require("../../Database/matches.json");
   // const ReelMatche = data.matches;
  
-  console.log(players[index].points);
-  console.log(players);
-  console.log(ReelMatche);
+  
   function addPoints(RTeam1, PTeam1) {
+    
     if (RTeam1[0] !== null) {
       if (RTeam1[0] === PTeam1[0] && RTeam1[1] === PTeam1[1]) {
         
