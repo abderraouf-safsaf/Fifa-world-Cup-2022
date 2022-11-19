@@ -1,11 +1,49 @@
-import React from "react";
+import React,{useState} from "react";
 import logo from "./img/logo.svg";
 import { Form, Card, Button } from "react-bootstrap";
+import Badge from "react-bootstrap/Badge";
+function Home({matches}) {
+  // const data = require("../../Database/matches.json");
+  // const matches = data.matches;
+  const [addScore1, setAddScore1] = useState("")
+  const [addScore2, setAddScore2] = useState("")
+ 
+ 
 
-function Home() {
-  const data = require("../../Database/matches.json");
-  const matches = data.matches;
+  const verifier = (matches) => {
+    const handleSubmit = (e) => {
+      e.preventDefault();
+  
+     
+      
+      
+      matches.score= [+addScore1 , +addScore2]
+      
+      console.log(matches.score)
+      setAddScore1('');
+      setAddScore2('');
+      
+    }
+    if (matches.score[0] === null) {
+      
+    return ( <Form onSubmit={handleSubmit} className="text-center">
+      <Form.Group className="mb-3">
+      
+        <Form.Control type="text" value={addScore1} placeholder={matches.team1} onChange={(e)=>{setAddScore1(e.target.value)} }  />
+      
+      </Form.Group>
 
+      <Form.Group className="mb-3">
+      
+        <Form.Control type="text" value={addScore2} placeholder={matches.team2} onChange={(e)=>{setAddScore2(e.target.value)} } />
+      </Form.Group>
+    
+      <Button variant="primary" type="submit">
+        Validez le Score
+      </Button>
+    </Form>)
+    }
+  }
   return (
     <div className="home container">
       <img src={logo} alt="logo" />
@@ -59,22 +97,11 @@ function Home() {
                   <br /> {match.team2}{" "}
                 </Card.Title>
                 <hr />
-                <Form className="text-center">
-                  <Form.Group className="mb-3">
-                    
-                    <Form.Control type="text" placeholder={match.team1} />
-                    
-                  </Form.Group>
 
-                  <Form.Group className="mb-3">
-                    
-                    <Form.Control type="text" placeholder={match.team2} />
-                  </Form.Group>
-                  
-                  <Button variant="primary" type="submit">
-                    Validez le Score
-                  </Button>
-                </Form>
+
+                {verifier(match)}
+                
+
               </Card.Body>
             </Card>
           );

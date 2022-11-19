@@ -10,42 +10,46 @@ import Player from "./components/players/player";
 
 function App() {
   const data2 = require("./Database/Players.json");
-
   const players = data2.joueurs;
   const data = require("./Database/matches.json");
   const ReelMatche = data.matches;
+  
   const classments = [...players];
-
-  console.log(data2.joueurs, players, classments);
+  
+  
 
   useEffect(() => {
-    for (let i = 0; i < players.length; i++) {
-      for (let j = 0; j < ReelMatche.length; j++) {
-        if (
-          ReelMatche[j].score[0] === players[i].matches[j].score[0] &&
-          ReelMatche[j].score[1] === players[i].matches[j].score[1]
-        ) {
-          players[i].points += 3;
-        } else if (
-          (ReelMatche[j].score[0] > ReelMatche[j].score[1] &&
-            players[i].matches[j].score[0] > players[i].matches[j].score[1]) ||
-          (ReelMatche[j].score[1] > ReelMatche[j].score[0] &&
-            players[i].matches[j].score[1] > players[i].matches[j].score[0])
-        ) {
-          players[i].points += 1;
+    if (ReelMatche[0] !== null) {
+      for (let i = 0; i < players.length; i++) {
+        for (let j = 0; j < ReelMatche.length; j++) {
+          if (
+            ReelMatche[j].score[0] === players[i].matches[j].score[0] &&
+            ReelMatche[j].score[1] === players[i].matches[j].score[1]
+          ) {
+            players[i].points += 3;
+          } else if (
+            (ReelMatche[j].score[0] > ReelMatche[j].score[1] &&
+              players[i].matches[j].score[0] > players[i].matches[j].score[1]) ||
+            (ReelMatche[j].score[1] > ReelMatche[j].score[0] &&
+              players[i].matches[j].score[1] > players[i].matches[j].score[0])
+          ) {
+            players[i].points += 1;
+          }
         }
       }
     }
     classments.sort((a, b) => (a.points < b.points ? 1 : -1));
-  }, []);
+  }, [ReelMatche]);
 
   return (
     <BrowserRouter>
       <Navbar players={players} />
 
       <Routes>
-        <Route path="/Fifa-world-Cup-2022/" element={<Home />} />
-        <Route path="/" element={<Home />} />
+        <Route path="/Fifa-world-Cup-2022/" element={<Home  />} />
+        <Route path="/" element={<Home matches={ReelMatche}  ReelMatche={ReelMatche}
+                  
+                  players={players}   />} />
 
         <Route
           path="/landing"
@@ -55,10 +59,12 @@ function App() {
         {players.map((player, index) => {
           return (
             <Route
+            
               key={index}
               path={`/${player.nom}`}
               element={
                 <Player
+                ReelMatche={ReelMatche}
                   index={index}
                   players={players}
                   nom={player.nom}

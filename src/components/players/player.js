@@ -1,19 +1,25 @@
 import React, { useEffect, useState } from "react";
 import Badge from "react-bootstrap/Badge";
 
-function Player({ nom, avatar, flag, match, players, index }) {
-  const data = require("../../Database/matches.json");
-  const ReelMatche = data.matches;
+function Player({ReelMatche, nom, avatar, flag, match, players, index }) {
 
+  // const data = require("../../Database/matches.json");
+  // const ReelMatche = data.matches;
+ 
+  console.log(players[index].points);
+  console.log(players);
+  console.log(ReelMatche);
   function addPoints(RTeam1, PTeam1) {
     if (RTeam1[0] !== null) {
       if (RTeam1[0] === PTeam1[0] && RTeam1[1] === PTeam1[1]) {
+        
         return <Badge bg="success p-3">3 points</Badge>;
       } else if (
         (RTeam1[0] > RTeam1[1] && PTeam1[0] > PTeam1[1]) ||
         (RTeam1[1] > RTeam1[0] && PTeam1[1] > PTeam1[0])
       ) {
-        return <Badge bg="warning p-3">1 points</Badge>;
+        
+        return (<Badge bg="warning p-3">1 points</Badge>);
       } else {
         return <Badge bg="danger p-3">0 points</Badge>;
       }

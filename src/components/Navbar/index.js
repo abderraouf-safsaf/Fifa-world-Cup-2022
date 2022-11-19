@@ -5,7 +5,7 @@ import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import { Link } from "react-router-dom";
 import logo from "./logo.png";
-
+import Badge from "react-bootstrap/Badge";
 function navbar({ players }) {
   return (
     <div>
@@ -19,7 +19,7 @@ function navbar({ players }) {
               className="d-inline-block align-top "
               alt="React Bootstrap logo"
             />
-            World Cup Champion 2022
+            World Cup Champion 2022 <Badge   style={{fontSize:10}} text= {"dark"} bg="warning">Beta</Badge>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
