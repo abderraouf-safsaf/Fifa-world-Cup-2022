@@ -2,21 +2,12 @@ import React,{useState , useEffect} from "react";
 
 import cup from "./img/cup.svg";
 
-function Landing({ players}) {
+function Landing({ classments}) {
  
 //  const  [classments , setClassments] = useState(classments1)
 
-  const classments = players;
-  console.log(classments)
-
-  useEffect(() => {
-    
-   
-  
-    
-  
-  classments.sort((a, b) => (a.points < b.points ? 1 : -1))
-  },[])
+ 
+ 
   
 
 

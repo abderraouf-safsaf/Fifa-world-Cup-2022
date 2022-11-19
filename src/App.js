@@ -14,7 +14,20 @@ function App() {
   const players = data2.joueurs;
   const data = require("./Database/matches.json");
   const ReelMatche = data.matches;
-  // const [points, setPoints] = useState(0);
+  const classments = players;
+  
+
+
+    
+   
+  
+    
+  
+  
+ 
+  
+
+
   
   useEffect(() => {
     for (let i = 0; i < players.length; i++) {
@@ -39,7 +52,7 @@ function App() {
       }
      
     }
-    
+    classments.sort((a, b) => (a.points < b.points ? 1 : -1))
   },[]);
 
  
@@ -55,7 +68,7 @@ function App() {
         <Route
           path="/landing"
           element={
-            <Landing players={players} flag={players.flag} classment={players.points} />
+            <Landing players={players} flag={players.flag} classment={players.points} classments={classments} />
           }
         />
 

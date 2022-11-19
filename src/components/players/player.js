@@ -7,7 +7,7 @@ function Player({ nom, avatar, flag, match,players,index }) {
   
   
  
- console.log(players[index].points)
+ console.log(players[index])
    
   
 
